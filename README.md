@@ -13,4 +13,4 @@ Face Tracking with ARKit + VFX Graph
 
 - [keijiro/Smrvfx](https://github.com/keijiro/Smrvfx)
 - [Unity-ARKit-Plugin](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin)
-    - [LICENSE](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/src/53b3d3b059f2dc2de4fe9b1c62e229ca5077aa5b/LICENSE?fileviewer=file-view-default)
+    - [LICENSE](https://github.com/mao-test-h/FaceTracking-VFX/blob/master/Assets/UnityARKitPlugin/LICENSE.txt)
