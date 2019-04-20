@@ -1,0 +1,36 @@
+﻿// refered to:
+// https://github.com/keijiro/Smrvfx
+// Smrvfx/Assets/Smrvfx/SkinnedMeshBaker.compute
+
+#pragma kernel CSMain
+
+uint VertexCount;
+float4x4 Transform;
+StructuredBuffer<float> PositionBuffer;
+RWTexture2D<float4> PositionMap;
+
+// Hash function from H. Schechter & R. Bridson, goo.gl/RXiKaH
+uint Hash(uint s)
+{
+    s ^= 2747636419u;
+    s *= 2654435769u;
+    s ^= s >> 16;
+    s *= 2654435769u;
+    s ^= s >> 16;
+    s *= 2654435769u;
+    return s;
+}
+
+[numthreads(8,8,1)]
+void CSMain (uint2 id : SV_DispatchThreadID)
+{
+    uint i = Hash(id.x + id.y * 65536) % VertexCount;
+
+    float3 position = float3(
+        PositionBuffer[i * 3],
+        PositionBuffer[i * 3 + 1],
+        PositionBuffer[i * 3 + 2]);
+
+    position = mul(Transform, float4(position, 1)).xyz;
+    PositionMap[id] = float4(position, 1);
+}
