@@ -8,3 +8,9 @@ Face Tracking with ARKit + VFX Graph
 - **Packages**
     - LWRP 5.7.2
     - Visual Effect Graph preview-5.13.0
+
+### refered / license
+
+- [keijiro/Smrvfx](https://github.com/keijiro/Smrvfx)
+- [Unity-ARKit-Plugin](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin)
+    - [LICENSE](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/src/53b3d3b059f2dc2de4fe9b1c62e229ca5077aa5b/LICENSE?fileviewer=file-view-default)
